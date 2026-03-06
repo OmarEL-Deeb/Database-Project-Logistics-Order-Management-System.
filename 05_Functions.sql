@@ -21,7 +21,7 @@ if @average_delivery_time is not null and @average_delivery_time <24
 set @Bonus=@Bonus+1000;
 return Isnull(@Bonus,0);
 End
-
+Go
 --------
 
 create Function dbo.fn_GetCustomerShipments(@CustomerId int)
