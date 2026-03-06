@@ -38,4 +38,4 @@ SELECT s.*
 FROM Shipments s
 LEFT JOIN Payments p 
     ON s.ShipmentId = p.ShipmentId
-WHERE p.ShipmentId IS NULL;
+WHERE p.ShipmentId IS NULL or p.IsPaid =0;
