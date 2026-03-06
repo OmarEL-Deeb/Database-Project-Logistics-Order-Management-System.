@@ -130,7 +130,7 @@ WHERE s.ShipmentId IS NULL;
 with CityRevenue AS(
 select 
 c.CityId ,c.Name , sum(p.Amount) AS TotalRevenue
-from Payments p join Shipments s on p.ShipmentId =p.ShipmentId
+from Payments p join Shipments s on p.ShipmentId =s.ShipmentId
 join Warehouses w on w.WarehouseId =s.OriginWarehouseId 
 join Cities c on c.CityId =w.CityId
 where p.IsPaid=1 
